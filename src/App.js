@@ -1,18 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
+function ColorBox({ color }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World
-        </p>
-
-      </header>
+    <div style={{
+      width: '100px',
+      height: '100px',
+      backgroundColor: color,
+      margin: '10px',
+      display: 'inline-block'
+    }}>
     </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Color Box Display</h1>
+      <section className="color-box-container">
+        <ColorBox color="red" />
+        <ColorBox color="green" />
+        <ColorBox color="blue" />
+        <ColorBox color="yellow" />
+        <ColorBox color="purple" />
+        <ColorBox color="orange" />
+        <ColorBox color="brown" />
+        <ColorBox color="gray" />
+        <ColorBox color="black" />
+        <ColorBox color="white" />
+      </section>
+    </div>
+  );
+}
+
+
